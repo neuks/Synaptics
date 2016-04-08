@@ -1,0 +1,29 @@
+var diff_pv, diff_pt, diff_po;
+
+function out = diff(in)
+{
+  var dv = in - diff_pv;
+  var dt = TIME - diff_pt;
+
+  if (dt > 0.02)
+  {
+    out = dv / dt;
+    diff_pv = in;
+    diff_pt = TIME;
+    diff_po = out;
+  }
+  else
+  {
+    out = diff_po;
+  }
+}
+
+var int_val, int_pt;
+
+function out = int(in)
+{
+  var dt = TIME - int_pt;
+  out = int_val += in * dt;
+  int_pt = TIME;
+}
+

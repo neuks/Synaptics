@@ -1,0 +1,1 @@
+Resources/Resource_cn.o: Resources/Resource_cn.rc Resources/Resource.h
