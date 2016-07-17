@@ -155,7 +155,7 @@ int CDataScope::MsgProc(UINT uMsg, WPARAM wParam, LPARAM lParam)
       OnKeyDown(wParam, lParam);
       break;
     case WM_ERASEBKGND:
-      return 0;
+      return TRUE;
   }
 
   return DefMDIChildProc(m_hWnd, uMsg, wParam, lParam);
